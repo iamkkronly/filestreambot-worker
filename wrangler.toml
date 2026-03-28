@@ -1,0 +1,36 @@
+name = "filestreambot-worker"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+# Environment Variables Configuration
+[vars]
+# Required: MongoDB Connection String
+# Format: mongodb+srv://username:password@cluster.mongodb.net/database?retryWrites=true&w=majority
+MONGODB_URI = "mongodb+srv://7f7c7cu_db_user:EBq3Nmcn18DWstkN@cluster0.hnit5tp.mongodb.net/?appName=Cluster0"
+
+# Required: Telegram Bot Token
+# Get this from BotFather on Telegram
+BOT_TOKEN = "8187078176:AAELyAjBhSdhSyXNunLwQwUm4KYOYuSnf5w"
+
+# Required: Your Telegram User ID (Owner ID)
+# Get this from @userinfobot on Telegram
+OWNER_ID = "5915172170"
+
+# Required: Base URL of your Cloudflare Worker
+# Format: https://your-worker-subdomain.workers.dev
+WORKER_URL = "filestreambot-worker.workers.dev"
+
+# Optional: MongoDB Data API Configuration (if using Data API instead of direct connection)
+# MONGO_API_URL = "https://data.mongodb-api.com/app/data-xyz/endpoint/data/v1"
+# MONGO_API_KEY = ""
+# MONGO_CLUSTER = "Cluster0"
+
+# Routes Configuration (Optional)
+# Uncomment and configure if you want to use a custom domain
+# [routes]
+# pattern = "your-domain.com/*"
+# zone_name = "your-domain.com"
+
+# Webhook Configuration
+# After deployment, set your webhook URL to:
+# https://api.telegram.org/botYOUR_BOT_TOKEN/setWebhook?url=YOUR_WORKER_URL/webhook
